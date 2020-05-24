@@ -1,8 +1,13 @@
 ## Twitter Hashtag Monitor
 
-### Tela Principal
+Aplicação para monitoramento do uso de determinada hashtag no Twitter.
+
+#### Tela Principal
 
 ![Monitor-Hashtags-Approved](https://github.com/FelipePbi/twitter_hashtag_monitor_front_end/blob/master/screenshots/monitor_tweets_approved_2.PNG)
+
+#### Painel de Controle
+
 ![Monitor-Hashtags-Painel-Control](https://github.com/FelipePbi/twitter_hashtag_monitor_front_end/blob/master/screenshots/painel_control_2.PNG)
 
 ## Sobre este projeto
@@ -55,14 +60,14 @@ _"Um diretor de TV precisa exibir em um telão, os tweets que chegam contendo um
 
 Para executar este projeto no modo de desenvolvimento, você precisará de um ambiente básico para executar um aplicativo React.JS, que pode ser encontrado [aqui](https://reactjs.org/docs/getting-started.html).
 
-Além disso, você precisará do servidor em execução localmente em sua máquina. Você pode encontrar o servidor e todas as instruções para iniciar o servidor [aqui](https://reactjs.org/docs/getting-started.html).
+Além disso, você precisará do servidor em execução localmente em sua máquina. Você pode encontrar o servidor e todas as instruções para iniciar o servidor [aqui](https://github.com/FelipePbi/twitter_hashtag_monitor_beck_end).
 
 ### Instalando
 
 **Clonando o Repositório**
 
 ```
-$ https://github.com/FelipePbi/twitter_hashtag_monitor_front_end
+$ git clone https://github.com/FelipePbi/twitter_hashtag_monitor_front_end
 
 $ cd twitter_hashtag_monitor_front_end
 ```
@@ -81,7 +86,7 @@ $ npm install
 
 ### Conectando o aplicativo ao servidor
 
-1 - Siga as instruções no servidor [twitter_hashtag_monitor_beck_end](ttps://github.com/FelipePbi/twitter_hashtag_monitor_beck_end) para que o servidor esteja sendo executado em sua máquina.
+1 - Siga as instruções no servidor [twitter_hashtag_monitor_beck_end](https://github.com/FelipePbi/twitter_hashtag_monitor_beck_end) para que o servidor esteja sendo executado em sua máquina.
 
 2 - Com o servidor em funcionamento, acesse o arquivo [src / configs / api.js](https://github.com/FelipePbi/twitter_hashtag_monitor_front_end/blob/master/src/configs/defaultConfig.js) e edite o valor do campo baseURL (linha 2) com o IP da sua máquina, exemplo _http://localhost:3333_.
 
