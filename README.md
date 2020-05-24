@@ -1,7 +1,7 @@
 ## Hashtag Monitor
 
-![Preview-Screens](https://github.com/FelipePbi/twitter_hashtag_monitor_front_end/blob/master/screenshots/monitor_tweets_approved_2.PNG)
-![Preview-Screens](https://github.com/FelipePbi/twitter_hashtag_monitor_front_end/blob/master/screenshots/painel_control_2)
+![Monitor-Hashtags-Approved](https://github.com/FelipePbi/twitter_hashtag_monitor_front_end/blob/master/screenshots/monitor_tweets_approved_2.PNG)
+![Monitor-Hashtags-Painel-Control](https://github.com/FelipePbi/twitter_hashtag_monitor_front_end/blob/master/screenshots/painel_control_2.PNG)
 
 ### `yarn start`
 
