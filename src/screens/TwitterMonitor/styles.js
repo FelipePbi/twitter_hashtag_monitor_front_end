@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   column-count: 3;
   column-gap: 13px;

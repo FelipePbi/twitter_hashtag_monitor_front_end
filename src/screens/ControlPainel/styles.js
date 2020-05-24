@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 15px;
 `;
 
 export const GridTweets = styled.section`
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 
   display: flex;

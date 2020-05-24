@@ -1,3 +1,4 @@
 export default {
-  baseURL: "http://localhost:3333/api",
+  baseURL: "", // Informe aqui a url padrão da api.
+  socketURL: "", // Informe aqui a url padrão para o websocket.
 };
