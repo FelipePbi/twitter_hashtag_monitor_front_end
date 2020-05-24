@@ -1,8 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Hashtag Monitor
 
-## Available Scripts
-
-In the project directory, you can run:
+![Preview-Screens](https://github.com/steniowagner/bon-appetit-app/blob/master/screenshots/monitor_tweets_approved_2.png)
+![Preview-Screens](https://github.com/steniowagner/bon-appetit-app/blob/master/screenshots/painel_control_2)
 
 ### `yarn start`
 

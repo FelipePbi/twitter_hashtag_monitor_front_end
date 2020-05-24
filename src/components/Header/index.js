@@ -10,6 +10,7 @@ import { Container, LinkContainer, CustomLink, Hashtag } from "./styles";
 import MonitorContext from "../../contexts/MonitorContext";
 
 import logo from "../../assets/images/logo.svg";
+import defaultConfig from "../../configs/defaultConfig";
 
 function Header(props) {
   const { hashtag, setHashtag, setMonitoring, setApproved, setReceived, setRejected } = useContext(MonitorContext);
@@ -23,7 +24,7 @@ function Header(props) {
   }, [props]);
 
   useEffect(() => {
-    const socket = socketio("http://localhost:3333");
+    const socket = socketio(defaultConfig.socketURL);
 
     socket.on("initialState", (data) => {
       setHashtag(data.hashtag);
