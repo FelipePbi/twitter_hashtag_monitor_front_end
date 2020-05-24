@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+
+import MonitorContext from "./contexts/MonitorContext";
+
+import GlobalStyle from "./styles/global";
+import Header from "./components/Header";
+import Routes from "./routes";
 
 function App() {
+  const [hashtag, setHashtag] = useState("");
+  const [monitoring, setMonitoring] = useState(false);
+  const [received, setReceived] = useState([]);
+  const [approved, setApproved] = useState([]);
+  const [rejected, setRejected] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MonitorContext.Provider
+      value={{
+        hashtag,
+        setHashtag,
+        monitoring,
+        setMonitoring,
+        received,
+        setReceived,
+        approved,
+        setApproved,
+        rejected,
+        setRejected,
+      }}
+    >
+      <BrowserRouter>
+        <Header />
+        <Routes />
+        <GlobalStyle />
+      </BrowserRouter>
+    </MonitorContext.Provider>
   );
 }
 
