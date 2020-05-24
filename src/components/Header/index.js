@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
-import { withRouter } from "react-router-dom";
 import socketio from "socket.io-client";
+import { withRouter } from "react-router-dom";
 import { toast } from "react-toastify";
-
 import { MdDvr, MdSettings } from "react-icons/md";
 
 import { Container, LinkContainer, CustomLink, Hashtag } from "./styles";
@@ -24,7 +23,7 @@ function Header(props) {
   }, [props]);
 
   useEffect(() => {
-    const socket = socketio(defaultConfig.socketURL);
+    const socket = socketio(defaultConfig.baseURL);
 
     socket.on("initialState", (data) => {
       setHashtag(data.hashtag);

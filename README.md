@@ -1,67 +1,111 @@
-## Hashtag Monitor
+## Twitter Hashtag Monitor
+
+### Tela Principal
 
 ![Preview-Screens](https://github.com/FelipePbi/twitter_hashtag_monitor_front_end/blob/master/screenshots/monitor_tweets_approved_2.PNG)
+
+### Painel de Controle
+
 ![Preview-Screens](https://github.com/FelipePbi/twitter_hashtag_monitor_front_end/blob/master/screenshots/painel_control_2)
 
-### `yarn start`
+## Sobre este projeto
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A ideia do aplicativo é referente a um desafio proposto a mim, com o seguinte contexto:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+_"Um diretor de TV precisa exibir em um telão, os tweets que chegam contendo uma determinada hashtag que varia diariamente. Foi pedido que esses tweets fossem inseridos no telão por um controle: Através de um sistema web que seria comandado pelo pessoal de operações do estúdio, neste caso o mesmo deveria aprovar os tweets que estão chegando para que o mesmo seja exibido. Para essa exibição, deverá obrigatoriamente ter efeito de transição entre os tweets que foram aprovados no sistema de controle."_
 
-### `yarn test`
+## Algumas observações sobre este projeto
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1 - Esta aplicação não foi desenvolvida para ser utilizada em monitores pequenos ou smartphones, portanto haverá desconfigurações de layout, caso acessada por estes.
 
-### `yarn build`
+2 - Não há funcionalidade de login/registro.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3 - Todas atualizações da aplicação é realizada em tempo real para todos usuários conectados na mesma.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+4 - Recomendada a utilização do navegador Google Chrome.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5 - A navegação entre as telas é feita atráves dos botões no canto superior direito.
 
-### `yarn eject`
+## Funcionalidades
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Tela principal:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Somente será mostrados os tweets que forem aprovados no painel de controle.
+  - O layout de exibição dos tweets utilizado é o _Mosaic Layout_.
+  - Está tela é somente para exibição.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Painel de Controle:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  - Possibilidade de Monitorar em tempo real determinadas hashtags que são tweetados no [Twitter](https://twitter.com/).
+  - Somente serão recebidos os tweets que forem criados a partir do momento que o monitoramento for iniciado.
 
-## Learn More
+  - Os tweets monitorados serão exibios na coluna 'Tweets Recebidos'.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    - Tweets recebidos podem ser Aprovados e Reprovados clicando nos respectivos botãos na parte superior do tweet.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - Os tweets aprovados serão exibios na coluna 'Tweets Aprovados'.
 
-### Code Splitting
+    - Tweets recebidos serão mostrados em tempo real na 'Tela Principal'.
+    - Tweets recebidos podem ser Reprovados clicando no respectivo botão na parte superior do tweet.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+  - Os tweets reprovados serão exibios na coluna 'Tweets Reprovados'.
 
-### Analyzing the Bundle Size
+    - Tweets reprovados podem ser Aprovados clicando no respectivo botão na parte superior do tweet.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Começando
 
-### Making a Progressive Web App
+### Pré-requisitos
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Para executar este projeto no modo de desenvolvimento, você precisará de um ambiente básico para executar um aplicativo React.JS, que pode ser encontrado [aqui](https://reactjs.org/docs/getting-started.html).
 
-### Advanced Configuration
+Além disso, você precisará do servidor em execução localmente em sua máquina. Você pode encontrar o servidor e todas as instruções para iniciar o servidor [aqui](https://reactjs.org/docs/getting-started.html).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Instalando
 
-### Deployment
+**Clonando o Repositório**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```
+$ https://github.com/FelipePbi/twitter_hashtag_monitor_front_end
 
-### `yarn build` fails to minify
+$ cd twitter_hashtag_monitor_front_end
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Instalando dependências**
+
+```
+$ yarn
+```
+
+_ou_
+
+```
+$ npm install
+```
+
+### Conectando o aplicativo ao servidor
+
+1 - Siga as instruções no servidor [twitter_hashtag_monitor_beck_end](ttps://github.com/FelipePbi/twitter_hashtag_monitor_beck_end) para que o servidor esteja sendo executado em sua máquina.
+
+2 - Com o servidor em funcionamento, acesse o arquivo [src / configs / api.js](https://github.com/FelipePbi/twitter_hashtag_monitor_front_end/blob/master/src/configs/defaultConfig.js) e edite o valor do campo baseURL (linha 2) com o IP da sua máquina, exemplo _http://localhost:3333_.
+
+### Rodando a aplicação
+
+Com todas as dependências instaladas e o ambiente configurado corretamente, agora você pode executar o aplicativo:
+
+```
+$ yarn start
+```
+
+## Sobre
+
+Este projeto faz parte do meu portfólio pessoal, portanto, ficarei feliz se você puder me fornecer algum feedback sobre o projeto, código, estrutura ou qualquer coisa que você possa relatar que possa me tornar um desenvolvedor melhor!
+
+Email: felipexd-2011@hotmail.com
+
+Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/felipe-borges-pbi/)
+
+Além disso, você pode usar este projeto como desejar, estudar, fazer melhorias ou ganhar dinheiro com ele!
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](https://github.com/steniowagner/bon-appetit-app/blob/master/LICENSE) para obter detalhes
